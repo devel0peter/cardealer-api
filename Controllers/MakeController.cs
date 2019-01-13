@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace cardealer.Controllers
 {
-	public class MakesController : Controller
+	public class MakeController : Controller
 	{
 		private readonly CardealerDbContext _context;
 		private readonly IMapper _mapper;
 
-		public MakesController(CardealerDbContext context, IMapper mapper)
+		public MakeController(CardealerDbContext context, IMapper mapper)
 		{
 			_context = context;
 			_mapper = mapper;
@@ -26,7 +26,7 @@ namespace cardealer.Controllers
 
 			return _mapper.Map<List<Make>, List<MakeResource>>(makes);
 		}
-
+		/*
 		// GET api/<controller>/5
 		[HttpGet("{id}")]
 		public string Get(int id)
@@ -51,5 +51,6 @@ namespace cardealer.Controllers
 		public void Delete(int id)
 		{
 		}
+		*/
 	}
 }
