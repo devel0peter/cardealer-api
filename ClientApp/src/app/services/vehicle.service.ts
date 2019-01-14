@@ -3,9 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class FeatureService {
+export class VehicleService {
 
   constructor(private http: HttpClient) { }
+
+  getMakes(): Observable<any> {
+    return this.http.get('/api/makes');
+  }
 
   getFeatures(): Observable<any> {
     return this.http.get('/api/features');
